@@ -1,94 +1,4 @@
-// function Yearofbirth(age)
-// {
-//     let Currentyear = 2025
-//     console.log(`your Year of birth:  ${Currentyear - age}`)
-// }
-
-// Yearofbirth(25)
-
-
-// const add = (num1, num2)=>{
-//     console.log(num1 + num2)
-// }
-
-// add(2, 3)
-
-// const Subtraction = (num1, num2)=>{
-//     console.log(num1 - num2)
-// }
-
-// Subtraction(2, 1)
-
-
-// const multiplication = (num1, num2)=>{
-//     console.log(num1 * num2)
-// }
-
-// multiplication(2, 6)
-
-
-// const Division = (num1, num2)=>{
-//     console.log(num1 / num2)
-// }
-
-// Division(2, 6)
-
-
-
-// function start(num)
-// {
-//     return Multi(num)
-// }
-
-// function Multi(num)
-// {
-//     const res = num * 2;
-//     return sub(res)
-// }
-
-// function sub(num)
-// {
-//     const res = num - 5;
-//     return div(res)
-// }
-
-// function div(num)
-// {
-//     const res = num / 10;
-//     return res
-// }
-
-// console.log(start(5))
-
-// function vbv()
-// {
-//     let x = 5
-//     if(true)
-//     {
-//         var x = 10
-//     }
-
-//    console.log(x)
-// }
-
-// vbv()
-
-// const names = ["bnbn", "vgvb", "vyb"]
-// function printVal(val)
-// {
-//     console.log(val)
-// }
-
-// function myforeac(array, fan)
-// {
-//     for(let i = 0; i < array.length; i ++)
-//     {
-//         fan(array[i])
-//     }
-// }
-
-// myforeac(names, printVal)
-
+// js functions exe 1
 
 
 // // 1
@@ -112,12 +22,116 @@ const numbers = [1, 2, 3, 4, 5,]
 
 
 // 3
-const mixarray = ["hvy", 2, 3, "hvh", "wrm",]
+// const mixarray = ["hvy", 2, 3, "hvh", "wrm",]
 
 
-function showFirstAndLast(array)
+// function showFirstAndLast(array)
+// {
+//     const juststring = array.filter(item => typeof item === "string")
+//     return [juststring[0], juststring[juststring.length - 1]];}
+
+// console.log(showFirstAndLast(mixarray))
+
+
+
+//// 4
+// function vowelCount(str)
+// {
+//     const leters = ["a", "e", "i", "o", "u"];
+//     let result = {}
+
+//     str.toLowerCase().split('').forEach(element => {
+//         for (let i = 0; i < leters.length; i++) {
+//             if (element === leters[i]){
+//                 if (result[element]) {
+//                      result[element] += 1;
+//                  } else {
+//                       result[element] = 1;
+//                  }}
+        
+//     }})
+//     return result;
+// }
+
+// const test  = vowelCount("Hello World")
+// console.log(test)
+
+
+// // 5
+
+function capitalize(str)
 {
-    const juststring = array.filter(item => typeof item === "string")
-    return [juststring[0], juststring[juststring.length - 1]];}
+    return str.split('').map(char =>{return char.toUpperCase()}).join('');
+}
 
-console.log(showFirstAndLast(mixarray))
+// const test = capitalize("dxfgyhuji")
+// console.log(test)
+
+
+
+// //6
+// function shiftLetters(str)
+// {
+//     const lowercase = "abcdefghijklmnopqrstuvwxyz";
+//     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+//     return str.split('').map(char => {
+//         if (lowercase.includes(char))
+//             {
+//               if(char === "a")
+//               {
+//                 return "z"
+//               }
+//               else
+//               {
+//                 const index = lowercase.indexOf(char);
+//                 return lowercase[index - 1];
+//               }
+//             }
+
+//         else if (uppercase.includes(char))
+//             {
+//               if(char === "A")
+//               {
+//                 return "Z";
+//               }
+//               else
+//               {
+//                 const index = uppercase.indexOf(char);
+//                 return uppercase[index - 1];
+//               }
+//             }
+//         else
+//             {
+//                 return char;
+//             }
+// })
+// .join("")
+// }
+
+// const test = shiftLetters("In Their Death They Were Not divideD")
+// console.log(test)
+
+
+//7
+function swapCase(str)
+{
+    return str.split(' ').map((word, index) =>
+    {
+        if(index %2 === 1)
+        {
+            return capitalize(word)
+        }
+        else
+        {
+            return word
+        }
+    })
+    .join(' ');
+    
+}
+
+const test = swapCase("dxfgy huji vv yhmm")
+console.log(test)
+
+
